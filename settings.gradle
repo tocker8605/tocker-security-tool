@@ -1,0 +1,8 @@
+rootProject.name = 'tocker-security-tool'
+include 'security-oauth'
+findProject(':security-oauth')?.name = 'oauth'
+include 'security-client'
+findProject(':security-client')?.name = 'client'
+include 'security-resource'
+findProject(':security-resource')?.name = 'resource'
+

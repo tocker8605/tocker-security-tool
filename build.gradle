@@ -1,0 +1,43 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.2.RELEASE'
+        dependencyManagementVersion = '1.0.6.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:${dependencyManagementVersion}"
+    }
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter")
+
+        compile("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.2")
+        compile("joda-time:joda-time:2.9.4")
+
+        compileOnly("org.projectlombok:lombok")
+
+        testCompile("org.springframework.boot:spring-boot-starter-test")
+    }
+
+}
+
+
+
+
+

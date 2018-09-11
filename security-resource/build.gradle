@@ -1,0 +1,21 @@
+group 'my.tocker'
+version '1.0-SNAPSHOT'
+
+project.version = version + '-' + new Date().format('yyyyMMdd-HHmmss')
+
+jar {
+    baseName = project.name
+    version = project.version
+    exclude("build/**")
+    ant.propertyfile(file: "src/main/resources/properties/version.properties") {
+        entry( key: "project.version", value: version)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+}
