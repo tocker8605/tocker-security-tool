@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.2.RELEASE'
+        springBootVersion = '2.0.5.RELEASE'
         dependencyManagementVersion = '1.0.6.RELEASE'
     }
     repositories {
@@ -26,9 +26,6 @@ allprojects {
 
     dependencies {
         compile("org.springframework.boot:spring-boot-starter")
-
-        compile("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.2")
-        compile("joda-time:joda-time:2.9.4")
 
         compileOnly("org.projectlombok:lombok")
 
