@@ -103,3 +103,4 @@ fabric.properties
 .gradle/
 .idea/modules/
 .idea/workspace.xml
+**/version.properties
